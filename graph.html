@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Enrollment Comparison</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="enrollment-chart"></canvas>
+
+    <script>
+      var ctx = document.getElementById('enrollment-chart').getContext('2d');
+
+      // Input your data here
+      var data = {
+        labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4'],
+        datasets: [
+          {
+            label: 'Department A',
+            data: [10, 15, 20, 25],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Department B',
+            data: [5, 10, 15, 20],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }
+        ]
+      };
+
+      var options = {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
+      };
+
+      var chart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+      });
+    </script>
+  </body>
+</html>

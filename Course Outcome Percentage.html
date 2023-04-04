@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="Course Outcome Percentage.css">
+  </head>
+  <body>
+    <header>
+      <h1>Calculate Your Course Outcome Percentage</h1>
+    </header>
+    <div class="container">
+      <form>
+        <div class="course">
+          <label for="course1">Course 1:</label>
+          <input type="number" id="course1" min="0" max="100" required>
+        </div>
+        <div class="course">
+          <label for="course2">Course 2:</label>
+          <input type="number" id="course2" min="0" max="100" required>
+        </div>
+        <div class="course">
+          <label for="course3">Course 3:</label>
+          <input type="number" id="course3" min="0" max="100" required>
+        </div>
+        <div class="course">
+          <label for="course4">Course 4:</label>
+          <input type="number" id="course4" min="0" max="100" required>
+        </div>
+        <div class="course">
+          <label for="course5">Course 5:</label>
+          <input type="number" id="course5" min="0" max="100" required>
+        </div>
+        <input type="submit" value="Calculate">
+      </form>
+      <div id="result">
+        <h2>Result</h2>
+        <p>Total grade: <span id="totalGrade"></span></p>
+        <p>Percentage: <span id="percentage"></span>%</p>
+        <p>Letter grade: <span id="letterGrade"></span></p>
+      </div>
+    </div>
+    <script src="Course Outcome Percentage.js"></script>
+  </body>
+</html>
